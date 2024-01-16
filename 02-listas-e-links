@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+	<head>
+		<title>HTML - Listas e Links</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Título exbido no corpo html</h1>
+
+		<h2 id="lista-nao-ordenada">Lista não ordenada</h2>
+		<ul>
+			<li>Brasil</li>
+			<li>Argentina</li>
+			<li>Uruguai</li>
+			<li>Paraguai</li>
+		</ul>
+		<h2>Lista ordenada</h2>
+		<ol>
+			<li>Palmeiras</li>
+			<li>Crinthians</li>
+			<li>Santos</li>
+			<li>São Paulo</li>
+		</ol>
+		
+		<dl>
+			<dt>TV</dt>
+			<dd>32 polegadas, smart, ...</dd>
+			<dt>PC</dt>
+			<dd>USB, 19 polegadas, Core I5</dd>		
+		</dl>
+
+		<h2>Links</h2>
+
+		<a href="https://ebaconline.com.br">EBAC</a> <br>
+
+		<a href="#top">Voltar ao topo</a> <br>
+
+		<a href="#lista-nao-ordenada">Ver a lista não prdenada</a>
+		
+	</body>
+</html>

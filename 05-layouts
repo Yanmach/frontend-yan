@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt_BR>
+	<head>
+		<title>HTML - Layouts</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width; inicial-scale=1"
+				
+		
+	</head>
+	<body>
+		<header>
+			<h2>Título da página</h2>
+		</header>
+
+		<section>
+			<nav>
+
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#sobre">Sobre</a></li>
+				<li><a href="#contato">Contato</a></li>
+			</ul>
+
+			</nav>
+
+			<article>
+			
+			<h1>Título Artigo</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet mauris imperdiet, viverra neque eu, cursus libero. Suspendisse potenti. Nam et ex pharetra lorem aliquet ultrices non sed orci. Mauris blandit rutrum hendrerit. Aliquam auctor efficitur convallis. Fusce sed eleifend quam. Suspendisse commodo mollis est, quis efficitur mi sollicitudin sed. Integer a luctus lectus. Morbi erat diam, commodo at est sit amet, ornare porttitor nisl. Nunc dapibus sapien at elit tempor posuere. Nullam et elit sed velit vestibulum ultricies et id ante. Maecenas at fringilla metus, sed mollis leo. Mauris justo lacus, placerat mattis pretium a, volutpat sed enim. Fusce rutrum enim et tellus hendrerit interdum.</p>
+
+<p>Duis molestie purus sed varius convallis. Ut vitae eros iaculis, luctus nibh vel, pellentesque turpis. Integer sed tristique est. Vestibulum enim augue, porta consectetur neque id, porta bibendum nunc. Suspendisse sem lorem, fermentum eget eleifend at, condimentum ut est. Etiam consequat risus at ultrices sagittis. Nunc in scelerisque ex, in hendrerit justo. Duis faucibus ante id lacus egestas, vel vulputate risus rhoncus. Mauris posuere odio non lectus elementum pharetra. Sed posuere ex a est fermentum viverra. Vestibulum augue est, hendrerit eu gravida eu, fringilla vitae metus.</p>
+
+
+			
+			</article>
+			
+		</section>
+		
+			<footer>
+				<p>Desenvolvido por Yan MAchado</p>
+			</footer>
+		
+	</body>
+</html>

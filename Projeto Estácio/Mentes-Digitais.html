@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentes Digitais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mentes Digitais</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="rastreio.html">Rastreamento</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Bem-vindo ao Mentes Digitais</h2>
+            <p>Rastreie sua pegada de carbono e descubra formas de viver de maneira mais sustentável.</p>
+            <a href="rastreio.html" class="button">Comece agora</a>
+        </section>
+    </main>
+    <div class="scroll-buttons">
+        <button onclick="scrollToTop()">&#8679;</button>
+        <button onclick="scrollToBottom()">&#8681;</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 Mentes Digitais</p>
+    </footer>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function scrollToBottom() {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

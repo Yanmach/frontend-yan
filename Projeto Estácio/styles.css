@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2B2E35;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4E4F59;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #FF7B0F;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #FF7B0F;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #E66A00;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+form input {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #4E4F59;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.scroll-buttons {
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-buttons button {
+    background-color: #FF7B0F;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.scroll-buttons button:hover {
+    background-color: #E66A00;
+}

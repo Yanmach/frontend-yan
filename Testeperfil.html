@@ -9,6 +9,9 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            /* Fundo gradiente escuro */
+            background: linear-gradient(to bottom, #0f172a, #1e293b);
+            color: #fff; /* Cor do texto para melhor contraste */
         }
         .fade-in {
             animation: fadeIn 1s ease-in-out;
@@ -25,97 +28,98 @@
             to { transform: translateY(0); opacity: 1; }
         }
         .highlight {
-            background: linear-gradient(to right, #a5f3d0, #f9a8d4); /* Cores de destaque */
+            /* Cores de destaque vibrantes */
+            background: linear-gradient(to right, #6ee7b7, #f472b6);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        /* Estilos personalizados para o portfólio */
-        body {
-            @apply bg-gradient-to-br from-gray-900 via-purple-900 to-black; /* Gradiente de fundo */
+        .btn-primary {
+            /* Estilo dos botões primários */
+            background: linear-gradient(to right, #8b5cf6, #d946ef);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: none;
+            cursor: pointer;
         }
-        .header {
-            @apply bg-white/10 backdrop-blur-md shadow-lg; /* Fundo do cabeçalho com efeito blur */
+        .btn-primary:hover {
+            /* Estilo ao passar o mouse */
+            background: linear-gradient(to right, #7c3aed, #c946ef);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
-        .header a {
-            @apply text-gray-300 hover:text-blue-400 transition duration-300; /* Estilo dos links do cabeçalho */
+        .btn-secondary {
+            /* Estilo dos botões secundários */
+            background-color: transparent;
+            border: 2px solid #a855f7;
+            color: #a855f7;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
-        .header button {
-            @apply bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300
-                    shadow-md hover:shadow-lg transform hover:scale-105; /* Estilo do botão de contato */
+        .btn-secondary:hover {
+            /* Estilo ao passar o mouse */
+            background-color: #a855f7;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .section-title {
-            @apply text-3xl font-semibold text-white text-center mb-12; /* Estilo dos títulos das seções */
+        .card {
+            /* Estilo dos cards */
+            background-color: rgba(255, 255, 255, 0.1); /* Fundo branco com transparência */
+            border-radius: 0.75rem;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Borda suave */
         }
-        .project-card {
-            @apply bg-white/10 backdrop-blur-md rounded-lg shadow-md p-6 transition duration-300
-                    hover:shadow-lg hover:scale-105 border border-white/10; /* Estilo dos cards de projeto */
+        .card:hover {
+            /* Estilo ao passar o mouse */
+            transform: translateY(-4px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+            border-color: rgba(255, 255, 255, 0.2); /* Borda mais clara */
         }
-        .project-card h3 {
-            @apply text-xl font-semibold text-blue-400 mb-4; /* Estilo dos títulos dos projetos */
+        .project-link {
+            /* Estilo dos links de projeto */
+            color: #f59e0b; /* Cor laranja vibrante */
+            font-weight: 600;
+            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-        .project-card p {
-            @apply text-gray-300 mb-4; /* Estilo da descrição dos projetos */
+        .project-link:hover {
+            /* Estilo ao passar o mouse */
+            color: #ed8936; /* Laranja mais escuro */
+            transform: translateX(4px);
         }
-        .project-card a {
-            @apply text-blue-400 hover:text-blue-300 transition duration-300 inline-flex items-center; /* Estilo dos links dos projetos */
+        .skill-item {
+            /* Estilo dos itens de habilidade */
+            background-color: rgba(255, 255, 255, 0.15); /* Fundo levemente transparente */
+            padding: 0.75rem 1.5rem;
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .skill-card {
-            @apply bg-white/10 backdrop-blur-md rounded-lg shadow-md p-6 transition duration-300
-                    hover:shadow-lg hover:scale-105 border border-white/10; /* Estilo dos cards de habilidades */
+        .skill-item:hover {
+            /* Estilo ao passar o mouse */
+            background-color: rgba(255, 255, 255, 0.25); /* Fundo mais claro ao passar o mouse */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
         }
-        .skill-card h3 {
-            @apply text-xl font-semibold text-green-400 mb-4; /* Estilo dos títulos das habilidades */
-        }
-        .skill-card ul {
-            @apply text-gray-300 space-y-2; /* Estilo da lista de habilidades */
-        }
-        #contato .info-contato {
-            @apply text-gray-300 text-lg space-y-2; /* Estilo das informações de contato */
-        }
-        #contato .info-contato a {
-            @apply text-blue-400 hover:text-blue-300 transition duration-300 inline-flex items-center;
-        }
-        #contato form {
-            @apply space-y-4; /* Estilo do formulário de contato */
-        }
-        #contato form label {
-            @apply block text-gray-200 text-sm font-bold mb-2; /* Estilo dos labels do formulário */
-        }
-        #contato form input,
-        #contato form textarea {
-            @apply shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight
-                    focus:outline-none focus:shadow-outline bg-white/80 text-white border-white/20; /* Estilo dos inputs do formulário */
-        }
-        #contato form textarea {
-            @apply h-32 resize-y; /* Estilo da textarea do formulário */
-        }
-        #contato form button {
-            @apply bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-full
-                    transition duration-300 shadow-md w-full hover:shadow-lg transform hover:scale-105; /* Estilo do botão de enviar do formulário */
-        }
-        footer {
-            @apply bg-gray-800 py-4; /* Estilo do rodapé */
-        }
-        footer p {
-            @apply text-gray-400 text-center; /* Estilo do texto do rodapé */
-        }
-        .frase-inspiracao {
-            @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 text-gray-300 text-lg italic text-center shadow-lg;
-        }
-
-        .botao-favorito {
-            @apply bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2.5 px-6 rounded-full transition duration-300
-                    shadow-md hover:shadow-lg transform hover:scale-105 flex items-center gap-2;
-        }
-
     </style>
 </head>
 <body class="bg-gray-900">
-    <header class="header">
+    <header class="bg-transparent shadow-md py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-semibold text-gray-300">Yan Machado</a>
+            <a href="#" class="text-xl font-semibold text-white">Yan Machado</a>
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
                     <li><a href="#projetos" class="text-gray-300 hover:text-blue-400 transition duration-300">Projetos</a></li>
@@ -123,8 +127,7 @@
                     <li><a href="#contato" class="text-gray-300 hover:text-blue-400 transition duration-300">Contato</a></li>
                 </ul>
             </nav>
-            <button onclick="window.location.href='#contato'" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2.5 px-6 rounded-full transition duration-300
-                    shadow-md hover:shadow-lg transform hover:scale-105">
+            <button onclick="window.location.href='#contato'" class="btn-primary">
                 Entrar em Contato
             </button>
         </div>
@@ -133,38 +136,47 @@
     <main class="container mx-auto px-4 py-10">
         <section class="text-center fade-in">
             <h2 class="text-4xl font-bold text-white mb-4">Olá, eu sou <span class="highlight">Yan Machado</span></h2>
-            <p class="text-lg text-gray-400 mb-8">Desenvolvedor Frontend | Apaixonado por criar experiências web incríveis.</p>
-            <img src="https://avatars.githubusercontent.com/u/87371735?v=4" alt="Yan Machado" class="rounded-full mx-auto mb-8 shadow-lg border-4 border-purple-500/50" width="150" height="150">
-            <p class="text-xl text-gray-300 mb-6">
+            <p class="text-lg text-gray-300 mb-8">Desenvolvedor Frontend | Apaixonado por criar experiências web incríveis.</p>
+            <img src="https://github.com/Yanmach/frontend-yan/blob/main/imgyan.jpg?raw=true" alt="Yan Machado" class="rounded-full mx-auto mb-8 shadow-lg border-4 border-purple-500/50" width="150" height="150">
+            <p class="text-xl text-gray-200 mb-6">
                 <span class="font-semibold text-purple-300">Tecnologias que domino:</span>
                 HTML, CSS, JavaScript, Git, GitHub.
             </p>
-            <button onclick="window.location.href='#projetos'" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3.5 px-8 rounded-full transition duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+            <button onclick="window.location.href='#projetos'" class="btn-primary">
                 Ver meus projetos
             </button>
         </section>
 
         <section id="projetos" class="py-16">
-            <h2 class="section-title">Meus Projetos</h2>
+            <h2 class="text-3xl font-semibold text-white text-center mb-12">Meus Projetos</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card">
+                <div class="card slide-up">
                     <h3 class="text-xl font-semibold text-blue-400 mb-4">Projeto 1: E-commerce de Roupas</h3>
                     <p class="text-gray-300 mb-4">Desenvolvimento de um e-commerce completo com carrinho de compras, checkout e área de usuário.</p>
-                    <a href="https://github.com/yanmach/projeto-ecommerce" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-300 inline-flex items-center">
+                    <a href="https://yanmach.github.io/frontend-yan/Projeto1.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Ver no Projeto <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                    <a href="https://github.com/yanmach/projeto-ecommerce" target="_blank" rel="noopener noreferrer" class="project-link mt-2">
                         Ver no GitHub <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
-                <div class="project-card">
+                <div class="card slide-up">
                     <h3 class="text-xl font-semibold text-blue-400 mb-4">Projeto 2: Aplicação de Lista de Tarefas</h3>
                     <p class="text-gray-300 mb-4">Criação de uma aplicação para gerenciar tarefas, com funcionalidades de adicionar, editar, marcar como concluída e excluir.</p>
-                    <a href="https://github.com/yanmach/lista-de-tarefas-react" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-300 inline-flex items-center">
+                    <a href="https://yanmach.github.io/frontend-yan/Listadetarefas.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Ver no Projeto <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                    <a href="https://github.com/yanmach/lista-de-tarefas-react" target="_blank" rel="noopener noreferrer" class="project-link mt-2">
                         Ver no GitHub <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
-                <div class="project-card">
+                <div class="card slide-up">
                     <h3 class="text-xl font-semibold text-blue-400 mb-4">Projeto 3: Site de Portfólio Pessoal</h3>
                     <p class="text-gray-300 mb-4">Desenvolvimento do meu portfólio pessoal para展示 meus projetos e habilidades.</p>
-                    <a href="https://github.com/yanmach/frontend-yan" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-300 inline-flex items-center">
+                    <a href="https://yanmach.github.io/frontend-yan/Testeperfil.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Ver no Projeto <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                    <a href="https://github.com/yanmach/frontend-yan" target="_blank" rel="noopener noreferrer" class="project-link mt-2">
                         Ver no GitHub <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -173,9 +185,9 @@
 
         <section id="habilidades" class="py-16">
             <div class="container mx-auto px-4">
-                <h2 class="section-title">Minhas Habilidades</h2>
+                <h2 class="text-3xl font-semibold text-white text-center mb-12">Minhas Habilidades</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-                    <div class="skill-card">
+                    <div class="skill-item slide-up">
                         <h3 class="text-xl font-semibold text-green-400 mb-4">Frontend</h3>
                         <ul class="text-gray-300 space-y-2">
                             <li>HTML5</li>
@@ -183,17 +195,15 @@
                             <li>JavaScript (ES6+)</li>
                         </ul>
                     </div>
-                    <div class="skill-card">
-                        <h3 class="text-xl font-semibold text-green-400 mb-4">Backend</h3>
+                    <div class="skill-item slide-up">
+                        <h3 class="text-xl font-semibold text-green-400 mb-4">Línguas</h3>
                         <ul class="text-gray-300 space-y-2">
-                            <li>Node.js</li>
-                            <li>Express.js</li>
-                            <li>PostgreSQL</li>
-                            <li>MongoDB</li>
+                            <li>Português</li>
+                            <li>Inglês</li>
                         </ul>
                     </div>
-                    <div class="skill-card">
-                        <h3 class="text-xl font-semibold text-green-400 mb-4">Outras Habilidades</h3>
+                    <div class="skill-item slide-up">
+                         <h3 class="text-xl font-semibold text-green-400 mb-4">Outras Habilidades</h3>
                         <ul class="text-gray-300 space-y-2">
                             <li>Git</li>
                             <li>GitHub</li>
@@ -203,32 +213,29 @@
                         </ul>
                     </div>
                 </div>
-                <div class="mt-12">
-                    <h3 class="text-2xl font-semibold text-white text-center mb-4">Línguas</h3>
-                    <div class="flex justify-center gap-8">
-                        <span class="text-lg text-gray-300">Português</span>
-                        <span class="text-lg text-gray-300">Inglês</span>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section id="contato" class="py-16">
             <div class="container mx-auto px-4">
-                <h2 class="section-title">Entre em Contato</h2>
-                <div class="bg-white/10 backdrop-blur-md rounded-lg shadow-md p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 border border-white/10">
+                <h2 class="text-3xl font-semibold text-white text-center mb-12">Entre em Contato</h2>
+                <div class="bg-white/10 rounded-lg shadow-md p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 border border-white/10 slide-up">
                     <div class="md:w-1/2">
                         <h3 class="text-xl font-semibold text-blue-400 mb-4">Informações de Contato</h3>
-                        <ul class="info-contato">
+                        <ul class="text-gray-300 text-lg space-y-2">
                             <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin inline-block mr-2 text-blue-400"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Rio de Janeiro, Brasil</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone inline-block mr-2 text-blue-400"><path d="M5 4h4l2 5-2.5 1.5a.5.5 0 0 0-.1 1L8 16a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5l-2.5-2.5a.5.5 0 0 0-1-.1L15 9l5-2v4a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h4Z"/></svg> Celular: (22) 99968-8400</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail inline-block mr-2 text-blue-400"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/><polyline points="22 6 12 13 2 6"/></svg> Email: yanmachado459@gmail.com</li>
-                            <li><a href="https://www.linkedin.com/in/yan-machado-de-souza-826931186/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-300 inline-flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin inline-block mr-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn
-                            </a></li>
-                            <li><a href="https://www.instagram.com/yanmach2/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-300 inline-flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram inline-block mr-2"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><rect width="6" height="6" x="8" y="8" rx="1"/><path d="M17.5 6.5c.17 1.38-1.22 2.48-3.1 2.48h-.1c-1.88 0-3.27-1.1-3.1-2.48s1.22-2.48 3.1-2.48h.1c1.88 0 3.27 1.1 3.1 2.48z"/></svg> Instagram
-                            </a></li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone inline-block mr-2 text-blue-400"><path d="M5 4h4l2 5-2.5 1.5a.5.5 0 0 0-.1 1L8 16a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5l-2.5-2.5a.5.5 0 0 0-1-.1L15 9l5-2v4a2 2 0 0 1-2 2H2a2 20 0 1-2-2V4a2 2 0 0 1 2-2h4Z"/></svg> (22) 99968-8400</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail inline-block mr-2 text-blue-400"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/><polyline points="22 6 12 13 2 6"/></svg> yanmachado459@gmail.com</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin inline-block mr-2 text-blue-400">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect width="4" height="12" x="2" y="9"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg> <a href="https://www.linkedin.com/in/yan-machado-de-souza-826931186/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-300">LinkedIn</a></li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram inline-block mr-2 text-blue-400">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                            </svg> <a href="https://www.instagram.com/yanmach2/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-300">Instagram</a></li>
                         </ul>
                     </div>
                     <div class="md:w-1/2">
@@ -236,32 +243,50 @@
                         <form class="space-y-4">
                             <div>
                                 <label for="nome" class="block text-gray-200 text-sm font-bold mb-2">Nome:</label>
-                                <input type="text" id="nome" name="nome" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Seu Nome">
+                                <input type="text" id="nome" name="nome" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-white/20 text-white border-purple-500/30" placeholder="Seu Nome">
                             </div>
                             <div>
                                 <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email:</label>
-                                <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="seuemail@exemplo.com">
+                                <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-white/20 text-white border-purple-500/30" placeholder="seuemail@exemplo.com">
                             </div>
                             <div>
                                 <label for="mensagem" class="block text-gray-200 text-sm font-bold mb-2">Mensagem:</label>
-                                <textarea id="mensagem" name="mensagem" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32 resize-y" placeholder="Sua Mensagem"></textarea>
+                                <textarea id="mensagem" name="mensagem" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32 resize-y bg-white/20 text-white border-purple-500/30" placeholder="Sua Mensagem"></textarea>
                             </div>
-                            <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300 shadow-md w-full">
+                            <button type="submit" class="btn-primary w-full">
                                 Enviar Mensagem
                             </button>
                         </form>
                     </div>
                 </div>
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold text-blue-400 text-center mb-4">Meus Sites Favoritos</h3>
+                    <div class="flex justify-center gap-4">
+                        <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-300">W3Schools</a>
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-300">GitHub</a>
+                        <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-300">Gemini</a>
+                    </div>
+                </div>
             </div>
         </section>
+    </main>
 
-        <section class="py-16">
-            <div class="container mx-auto px-4">
-                <h2 class="section-title">Meus Sites Favoritos</h2>
-                <div class="flex flex-wrap justify-center gap-6">
-                    <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer" class="botao-favorito">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe inline-block mr-2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M12 2v20"/><path d="M2 12h20"/><path d="M6.31 18.19a12 12 0 0 1 0-12.38"/><path d="M17.69 18.19a12 12 0 0 0 0-12.38"/></svg>
-                        W3Schools
-                    </a>
-                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="botao-favorito">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github inline-block mr-2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 
+    <footer class="bg-gray-800 py-4">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            © 2024 Yan Machado. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        // Rolagem suave para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

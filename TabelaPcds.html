@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusão de PCDs no Brasil: Educação e Trabalho (2020-2024)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Azul acinzentado claro */
+            color: #1e293b; /* Azul ardósia escuro */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1000px;
+            overflow-x: auto; /* Para tabelas responsivas */
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.75rem; /* Equivalente a text-2xl do Tailwind */
+            font-weight: 700; /* font-bold */
+            color: #334155; /* Azul ardósia mais escuro */
+            margin-bottom: 24px; /* mb-6 */
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 20px;
+            animation: fadeInTable 1s ease-out forwards;
+        }
+
+        @keyframes fadeInTable {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        th, td {
+            padding: 12px 15px; /* py-3 px-4 */
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0; /* Cinza claro */
+            transition: background-color 0.3s ease;
+        }
+        th {
+            background: linear-gradient(to right, #60a5fa, #3b82f6); /* Gradiente azul */
+            color: white;
+            font-weight: 600; /* font-semibold */
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        th:first-child {
+            border-top-left-radius: 8px;
+        }
+        th:last-child {
+            border-top-right-radius: 8px;
+        }
+        tr:last-child td:first-child {
+            border-bottom-left-radius: 8px;
+        }
+        tr:last-child td:last-child {
+            border-bottom-right-radius: 8px;
+        }
+        tr:hover td {
+            background-color: #eff6ff; /* Azul muito claro ao passar o mouse */
+        }
+        .area-inclusao {
+            font-weight: 600;
+            color: #2563eb; /* Azul vibrante */
+        }
+        .fonte-observacao {
+            font-size: 0.875rem; /* text-sm */
+            color: #475569; /* Cinza ardósia */
+        }
+        .indicador-destaque {
+            color: #16a34a; /* Verde para destaque positivo */
+            font-weight: bold;
+        }
+        .indicador-desafio {
+            color: #dc2626; /* Vermelho para destaque de desafio */
+            font-weight: bold;
+        }
+
+        /* Responsividade da tabela */
+        @media screen and (max-width: 768px) {
+            th, td {
+                font-size: 0.875rem; /* Reduzir fonte em telas menores */
+                padding: 8px 10px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Panorama da Inclusão de Pessoas com Deficiência no Brasil (2020-2024)</h1>
+        <p class="text-center text-gray-600 mb-6">
+            Um olhar sobre os avanços e desafios na educação inclusiva e no mercado de trabalho, com base em dados e informações recentes.
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Área de Inclusão</th>
+                    <th>Ano/Período</th>
+                    <th>Indicador Principal/Ação</th>
+                    <th>Fonte/Observação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="area-inclusao" rowspan="4">Inclusão Escolar de Crianças com Deficiência</td>
+                    <td>2020</td>
+                    <td class="indicador-destaque">3.265.715 alunos com deficiência matriculados na educação básica.</td>
+                    <td class="fonte-observacao">CNN Brasil (citando IBGE/MEC). Representa um aumento expressivo em relação a 2010 (682.344 alunos), estabelecendo uma base importante para o período recente.</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>Taxa de analfabetismo (PcD geral): <span class="indicador-desafio">19,5%</span> (vs. 4,1% sem deficiência). Apenas <span class="indicador-desafio">25,6%</span> das PcD concluíram o Ensino Médio.</td>
+                    <td class="fonte-observacao">IBGE, PNAD Contínua 2022. Embora se refira a PcD em geral, evidencia desafios na trajetória educacional que se iniciam na infância e impactam a inclusão plena.</td>
+                </tr>
+                <tr>
+                    <td>Contínuo (Pós 2020)</td>
+                    <td>Implementação da Lei nº 14.191/2021 (Educação Bilíngue de Surdos).</td>
+                    <td class="fonte-observacao">Legislação Federal. Marco para aprimorar a educação de estudantes surdos, com Libras como primeira língua.</td>
+                </tr>
+                 <tr>
+                    <td>Recente (Plano Plurianual)</td>
+                    <td>Ações do Plano "Novo Viver Sem Limite": metas para aquisição de salas de recursos multifuncionais (38 mil escolas) e atendimento direto a crianças com deficiência (95 mil).</td>
+                    <td class="fonte-observacao">Gov.br (Ministério dos Direitos Humanos e da Cidadania). Indica foco governamental contínuo na melhoria da infraestrutura e atendimento, mas são metas e não necessariamente dados de matrículas anuais consolidados para o período 2020-2024.</td>
+                </tr>
+
+                <tr>
+                    <td class="area-inclusao" rowspan="4">Inclusão de PCDs no Mercado de Trabalho</td>
+                    <td>2022</td>
+                    <td>Taxa de participação na força de trabalho: <span class="indicador-desafio">29,2%</span> (vs. 66,4% sem deficiência). Nível de ocupação: <span class="indicador-desafio">26,6%</span> (vs. 60,7% sem deficiência).</td>
+                    <td class="fonte-observacao">IBGE, PNAD Contínua 2022. Demonstra disparidades significativas e a sub-representação de PCDs no mercado de trabalho.</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>Informalidade entre PCDs ocupadas: <span class="indicador-desafio">55,0%</span> (vs. 38,7% sem deficiência). Rendimento médio: <span class="indicador-desafio">R$1.860</span> (vs. R$2.690 sem deficiência).</td>
+                    <td class="fonte-observacao">IBGE, PNAD Contínua 2022. Aponta para maior vulnerabilidade e menores rendimentos para PCDs no mercado de trabalho.</td>
+                </tr>
+                <tr>
+                    <td>Março 2024</td>
+                    <td class="indicador-destaque">545,9 mil trabalhadores com deficiência atuando no mercado de trabalho formal.</td>
+                    <td class="fonte-observacao">Agência Gov (dados do eSocial). Número absoluto que indica a presença de PCDs no mercado formal, mas que precisa ser analisado no contexto da Lei de Cotas e do total da população PcD economicamente ativa.</td>
+                </tr>
+                <tr>
+                    <td>Contínuo</td>
+                    <td>Desafios persistentes: Capacitismo, barreiras de acessibilidade, necessidade de maior qualificação e conscientização de empregadores sobre a Lei de Cotas (Lei nº 8.213/91).</td>
+                    <td class="fonte-observacao">Consolidado de diversas fontes. A Lei de Cotas (2-5% de vagas em empresas com 100+ funcionários) é um instrumento importante, mas seu pleno cumprimento e a qualidade da inclusão ainda são desafios.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mt-6 text-sm text-gray-700">
+            <strong>Nota:</strong> A tabela apresenta uma compilação de dados e informações de diferentes fontes e anos, buscando oferecer um panorama da evolução recente. A disponibilidade de dados anuais consistentes para todos os indicadores pode variar. A "animação" é um efeito visual sutil para melhor apresentação.
+        </p>
+    </div>
+</body>
+</html>

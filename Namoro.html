@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz aniversário de Namoro</title>
+
+
+    <style>
+        body{
+            background-color: #ffb6c1;
+        
+        }
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim{
+            
+            height: 40px;
+            width: 60px;
+            background-color: white;
+            border: 2px solid red;
+            border-radius: 10px;
+            color: black;
+            margin-left: -50px;
+
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border:2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="painel">
+            <h1> Feliz Aniversário de Namoro</h1>
+
+            <audio controls>
+                <source src="audios/Gilsons-LoveLove.mp3" type="">
+            </audio>
+
+            <img src="https://www.gratistodo.com/wp-content/uploads/2021/10/i-love-you-gifs-gratistodo.com-24.gif" alt="">
+
+            <h2> Aceita ficar comigo pra sempre? </h2>
+
+           
+
+            <a href="https://tenor.com/pt-BR/view/shrek-shrek-rizz-rizz-gif-11157824601050747846"><button id="sim"> Sim! </button></a>
+            <button onmouseover="fuja()" id="nao"> Não! </button>
+            
+           
+           
+    </div>
+
+
+    <script>
+    
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetwidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreamento de Pegada de Carbono</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mentes Digitais</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="rastreio.html">Rastreamento</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Rastreamento de Pegada de Carbono</h2>
+            <form id="carbonForm">
+                <div class="form-group">
+                    <label for="transporte">Transporte:</label>
+                    <input type="text" id="transporte" name="transporte">
+                </div>
+                <div class="form-group">
+                    <label for="energia">Consumo de Energia:</label>
+                    <input type="text" id="energia" name="energia">
+                </div>
+                <div class="form-group">
+                    <label for="alimentacao">Hábitos Alimentares:</label>
+                    <input type="text" id="alimentacao" name="alimentacao">
+                </div>
+                <button type="submit" class="button">Calcular Pegada de Carbono</button>
+            </form>
+        </section>
+        <section id="results" style="display: none;">
+            <h2>Resultados</h2>
+            <p>Seu cálculo de pegada de carbono será mostrado aqui.</p>
+            <div id="carbonOutput"></div>
+            <h3>Recomendações Sustentáveis</h3>
+            <ul id="recommendations">
+                <!-- Recomendações serão inseridas aqui -->
+            </ul>
+        </section>
+    </main>
+    <div class="scroll-buttons">
+        <button onclick="scrollToTop()">&#8679;</button>
+        <button onclick="scrollToBottom()">&#8681;</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 Mentes Digitais</p>
+    </footer>
+    <script>
+        document.getElementById('carbonForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('carbonOutput').innerText = 'Sua pegada de carbono foi calculada!';
+            const recommendations = [
+                'Troque o carro pela bicicleta.',
+                'Use lâmpadas LED.',
+                'Reduza o consumo de carne.'
+            ];
+            const recommendationsList = document.getElementById('recommendations');
+            recommendationsList.innerHTML = '';
+            recommendations.forEach(rec => {
+                const li = document.createElement('li');
+                li.innerText = rec;
+                recommendationsList.appendChild(li);
+            });
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToBottom() {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+.

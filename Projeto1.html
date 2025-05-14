@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce de Roupas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .produto:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        .adicionar-carrinho:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease;
+        }
+        .remover-item:hover {
+            transform: scale(1.2);
+            transition: transform 0.2s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-6 flex justify-between items-center shadow-md sticky top-0 z-10 rounded-md">
+        <div class="logo text-2xl font-bold ml-6">E-commerce de Roupas</div>
+        <nav class="mr-6">
+            <ul class="flex space-x-6">
+                <li><a href="#produtos" class="hover:text-purple-200 no-underline text-lg font-semibold transition duration-300">Produtos</a></li>
+                <li><a href="#carrinho" class="hover:text-purple-200 no-underline text-lg font-semibold transition duration-300">Carrinho</a></li>
+                <li><a href="#usuario" class="hover:text-purple-200 no-underline text-lg font-semibold transition duration-300">Usuário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="produtos" class="container mx-auto py-10">
+        <h2 class="text-3xl font-semibold text-center mb-8 text-purple-700">Produtos em Destaque</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="produto bg-white rounded-lg shadow-md p-6 flex flex-col justify-between transition duration-300">
+                <img src="https://source.unsplash.com/featured/?t-shirt,model" alt="Camiseta Confortável" class="mb-4 rounded-md h-64 object-cover">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Camiseta Confortável</h3>
+                <p class="text-gray-600 mb-2">Descrição: Camiseta de algodão macio com estampa exclusiva.</p>
+                <p class="text-purple-600 font-bold text-lg mb-2">Preço: R$29,99</p>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-3 px-6 rounded-md mt-4 adicionar-carrinho transition duration-200" data-nome="Camiseta Confortável" data-preco="29.99">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto bg-white rounded-lg shadow-md p-6 flex flex-col justify-between transition duration-300">
+                <img src="https://source.unsplash.com/featured/?jeans,model" alt="Calça Jeans Premium" class="mb-4 rounded-md h-64 object-cover">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Calça Jeans Premium</h3>
+                <p class="text-gray-600 mb-2">Descrição: Calça jeans de alta qualidade, corte moderno.</p>
+                <p class="text-purple-600 font-bold text-lg mb-2">Preço: R$89,99</p>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-3 px-6 rounded-md mt-4 adicionar-carrinho transition duration-200" data-nome="Calça Jeans Premium" data-preco="89.99">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto bg-white rounded-lg shadow-md p-6 flex flex-col justify-between transition duration-300">
+                <img src="https://source.unsplash.com/featured/?hoodie,model" alt="Moletom Estiloso" class="mb-4 rounded-md h-64 object-cover">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Moletom Estiloso</h3>
+                <p class="text-gray-600 mb-2">Descrição: Moletom com design moderno e confortável.</p>
+                <p class="text-purple-600 font-bold text-lg mb-2">Preço: R$59,99</p>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-3 px-6 rounded-md mt-4 adicionar-carrinho transition duration-200" data-nome="Moletom Estiloso" data-preco="59.99">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto bg-white rounded-lg shadow-md p-6 flex flex-col justify-between transition duration-300">
+                <img src="https://source.unsplash.com/featured/?sneakers,model" alt="Tênis Esportivo" class="mb-4 rounded-md h-64 object-cover">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Tênis Esportivo</h3>
+                <p class="text-gray-600 mb-2">Descrição: Tênis de alta performance para esportes.</p>
+                <p class="text-purple-600 font-bold text-lg mb-2">Preço: R$129,99</p>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-3 px-6 rounded-md mt-4 adicionar-carrinho transition duration-200" data-nome="Tênis Esportivo" data-preco="129.99">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="carrinho" class="container mx-auto py-10">
+        <h2 class="text-3xl font-semibold text-center mb-8 text-purple-700">Carrinho de Compras</h2>
+        <div id="carrinho-itens" class="bg-white rounded-lg shadow-md p-6">
+            <p class="text-gray-700">Seu carrinho está vazio.</p>
+        </div>
+        <div id="carrinho-total" class="mt-6 text-right font-bold text-purple-600 text-xl">
+            Total: R$0,00
+        </div>
+        <div class="mt-8 text-center">
+            <button id="finalizar-compra" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-md text-lg transition duration-200">Finalizar Compra</button>
+        </div>
+    </section>
+
+    <section id="usuario" class="container mx-auto py-10">
+        <h2 class="text-3xl font-semibold text-center mb-8 text-purple-700">Área do Usuário</h2>
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <p class="text-gray-700 text-lg mb-4">Bem-vindo, Usuário!</p>
+            <p class="text-gray-700 text-lg">Aqui você pode ver suas informações e histórico de compras.</p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6 text-center rounded-md mt-8">
+        <p>© 2023 E-commerce de Roupas. Todos os direitos reservados.</p>
+        <p class="mt-2">Desenvolvido por <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:underline">Exemplo</a></p>
+    </footer>
+
+    <script>
+        const carrinhoItens = document.getElementById('carrinho-itens');
+        const carrinhoTotalElement = document.getElementById('carrinho-total');
+        const finalizarCompraButton = document.getElementById('finalizar-compra');
+        let carrinho = [];
+
+        if (localStorage.getItem('carrinho')) {
+            carrinho = JSON.parse(localStorage.getItem('carrinho'));
+            atualizarCarrinho();
+        }
+
+        document.querySelectorAll('.adicionar-carrinho').forEach(button => {
+            button.addEventListener('click', function() {
+                const nome = this.dataset.nome;
+                const preco = parseFloat(this.dataset.preco);
+                adicionarAoCarrinho(nome, preco);
+            });
+        });
+
+        function adicionarAoCarrinho(nome, preco) {
+            const produtoExistente = carrinho.find(item => item.nome === nome);
+            if (produtoExistente) {
+                produtoExistente.quantidade++;
+            } else {
+                carrinho.push({ nome, preco, quantidade: 1 });
+            }
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            atualizarCarrinho();
+            exibirMensagem(`Produto "${nome}" adicionado ao carrinho!`, 'success');
+        }
+
+        function atualizarCarrinho() {
+            carrinhoItens.innerHTML = '';
+            let total = 0;
+            if (carrinho.length === 0) {
+                carrinhoItens.innerHTML = '<p class="text-gray-700">Seu carrinho está vazio.</p>';
+            } else {
+                carrinho.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('carrinho-item', 'flex', 'justify-between', 'items-center', 'py-3', 'border-b', 'border-gray-200');
+                    itemDiv.innerHTML = `
+                        <div>
+                            <h4 class="font-semibold text-gray-800 text-lg">${item.nome}</h4>
+                            <p class="text-gray-600">Quantidade: ${item.quantidade}</p>
+                        </div>
+                        <p class="text-purple-600 font-bold text-lg">R$${(item.preco * item.quantidade).toFixed(2)}</p>
+                        <button class="remover-item text-red-500 hover:text-red-700 font-bold py-1 px-2 rounded-md transition duration-200" data-nome="${item.nome}">Remover</button>
+                    `;
+                    carrinhoItens.appendChild(itemDiv);
+                    total += item.preco * item.quantidade;
+                });
+            }
+            carrinhoTotalElement.textContent = `Total: R$${total.toFixed(2)}`;
+            adicionarEventosRemover();
+        }
+
+        function removerItem(nome) {
+            carrinho = carrinho.filter(item => item.nome !== nome);
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            atualizarCarrinho();
+            exibirMensagem(`Produto "${nome}" removido do carrinho!`, 'error');
+        }
+
+        function adicionarEventosRemover() {
+            document.querySelectorAll('.remover-item').forEach(button => {
+                button.addEventListener('click', function() {
+                    const nome = this.dataset.nome;
+                    removerItem(nome);
+                });
+            });
+        }
+
+        finalizarCompraButton.addEventListener('click', function() {
+            if (carrinho.length === 0) {
+                exibirMensagem('Seu carrinho está vazio!', 'warning');
+            } else {
+                alert('Compra finalizada com sucesso! Total: R$' + carrinhoTotalElement.textContent.replace('Total: R$', ''));
+                carrinho = [];
+                localStorage.removeItem('carrinho');
+                atualizarCarrinho();
+            }
+        });
+
+        function exibirMensagem(mensagem, tipo = 'success') {
+            const mensagemDiv = document.createElement('div');
+            mensagemDiv.classList.add('mensagem', 'fixed', 'top-6', 'right-6', 'rounded-md', 'p-4', 'shadow-lg', 'z-50', 'transition-opacity', 'duration-300');
+            if (tipo === 'success') {
+                mensagemDiv.classList.add('bg-green-100', 'text-green-700', 'border-l-4', 'border-green-500');
+            } else if (tipo === 'error') {
+                mensagemDiv.classList.add('bg-red-100', 'text-red-700', 'border-l-4', 'border-red-500');
+            } else {
+                mensagemDiv.classList.add('bg-yellow-100', 'text-yellow-700', 'border-l-4', 'border-yellow-500');
+            }
+            mensagemDiv.textContent = mensagem;
+            document.body.appendChild(mensagemDiv);
+            setTimeout(() => {
+                mensagemDiv.style.opacity = '0';
+                setTimeout(() => mensagemDiv.remove(), 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michele Merlot Estética & Cosmética</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(1);
+            }
+            75% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilos para o novo cabeçalho */
+        .logo-animation {
+            animation: color-animation 5s infinite alternate;
+        }
+        @keyframes color-animation {
+            0% { color: #a5f3d0; /* Verde água claro */ }
+            25% { color: #f9a8d4; /* Rosa claro */ }
+            50% { color: #bae6fd; /* Azul bebê */ }
+            75% { color: #d8b4fe; /* Roxo claro */ }
+            100% { color: #a5f3d0; /* Verde água claro */ }
+        }
+
+        .logo-glow {
+            text-shadow: 0 0 8px rgba(167, 139, 250, 0.7); /* Roxo claro com glow */
+        }
+
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-purple-100 min-h-screen flex flex-col">
+    <header class="bg-white/80 backdrop-blur-md py-4 shadow-md sticky top-0 z-10 fade-in">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-semibold logo-animation logo-glow">M & M</h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#servicos" class="text-gray-700 hover:text-blue-500 transition duration-300">Serviços</a></li>
+                    <li><a href="#pacotes" class="text-gray-700 hover:text-blue-500 transition duration-300">Pacotes</a></li>
+                    <li><a href="#sobre" class="text-gray-700 hover:text-blue-500 transition duration-300">Sobre Nós</a></li>
+                    <li><a href="#contato" class="text-gray-700 hover:text-blue-500 transition duration-300">Contato</a></li>
+                </ul>
+            </nav>
+            <button onclick="window.location.href='#pacotes'" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2.5 px-6 rounded-full transition duration-300 flex items-center gap-2">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M10.3 15.3a1 1 0 0 1-1.6 0l-3.7-3.7a1 1 0 0 1 1.6-1.6L10 13L12.7 9.7a1 1 0 0 1 1.6 1.6l-3.7 3.7z"/></svg>
+                Comprar Pacotes
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-10 flex-grow flex justify-center items-center">
+        <div class="text-center slide-up">
+            <h2 class="text-4xl font-bold text-blue-700 mb-4">Bem-vinda à Michele Merlot</h2>
+            <p class="text-lg text-gray-600 mb-8">Seu destino para beleza e bem-estar. Descubra nossos tratamentos exclusivos.</p>
+            <button onclick="window.location.href='#servicos'" class="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold py-3.5 px-8 rounded-full transition duration-300 shadow-lg flex items-center gap-3 heartbeat">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-spa"><path d="M5 5.5h14"/><path d="M19.6 8.9A7 7 0 0 1 15 2a7 7 0 0 1-10 10"/><path d="M2 17.5a7 7 0 0 1 10-10 7 7 0 0 1 7 7"/></svg>
+                Conheça nossos serviços
+            </button>
+        </div>
+    </main>
+
+    <section id="servicos" class="bg-blue-50/50 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-blue-700 text-center mb-12 fade-in">Nossos Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6 transition duration-300 hover:shadow-lg hover:scale-[1.02] slide-up">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Limpeza de Pele Profunda</h3>
+                    <p class="text-gray-600 mb-4">Remoção de impurezas, cravos e espinhas. Pele renovada e saudável.</p>
+                    <img src="https://images.unsplash.com/photo-1622253696025-555e64689447?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Limpeza de Pele Profunda" class="w-full rounded-md mb-4">
+                    <button onclick="window.location.href='#contato'" class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 text-white font-semibold py-2.5 px-6 rounded-full transition duration-300 flex items-center gap-2">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
+                        Agendar
+                    </button>
+                </div>
+                <div class="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6 transition duration-300 hover:shadow-lg hover:scale-[1.02] slide-up">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Massagem Relaxante</h3>
+                    <p class="text-gray-600 mb-4">Alívio do estresse e tensões musculares. Bem-estar e relaxamento profundo.</p>
+                    <img src="https://images.unsplash.com/photo-1592207972288-d5f259555747?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Massagem Relaxante" class="w-full rounded-md mb-4">
+                     <button onclick="window.location.href='#contato'" class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 text-white font-semibold py-2.5 px-6 rounded-full transition duration-300 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand-massage"><path d="M17.5 7.5c2.5 0 4.5-2 4.5-4.5s-2-4.5-4.5-4.5-4.5 2-4.5 4.5 2 4.5 4.5 4.5Z"/><path d="M19.1 19.1c.9-1.5 1.4-3.2 1.4-5 0-5.5-4.5-10-10-10S0 8.6 0 14.1c0 1.8.5 3.5 1.4 5"/><path d="M7.5 17.5c0 2.5 2 4.5 4.5 4.5s4.5-2 4.5-4.5-2-4.5-4.5-4.5-4.5 2-4.5 4.5Z"/></svg>
+                        Agendar
+                    </button>
+                </div>
+                <div class="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6 transition duration-300 hover:shadow-lg hover:scale-[1.02] slide-up">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Tratamentos Faciais</h3>
+                    <p class="text-gray-600 mb-4">Rejuvenescimento, hidratação e combate aos sinais do tempo. Pele radiante e saudável.</p>
+                    <img src="https://images.unsplash.com/photo-1591952538185-c1538f246999?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tratamentos Faciais" class="w-full rounded-md mb-4">
+                     <button onclick="window.location.href='#contato'" class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 text-white font-semibold py-2.5 px-6 rounded-full transition duration-300 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-face-care"><path d="M4.1 15.9a8 8 0 0 0 9.8 8.1 8 8 0 0 0 9-9 4 4 0 0 0-4-4H4a4 4 0 0 0 0 8Z"/><path d="M12 12v-2"/><path d="M15 10l-1.7-1.7"/><path d="M9 10L7.3 8.3"/></svg>
+                        Agendar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pacotes" class="bg-purple-50/50 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-blue-700 text-center mb-12 fade-in">Nossos Pacotes Especiais</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6 transition duration-300 hover:shadow-lg hover:scale-[1.02] slide-up">
+                    <h3 class="text-xl font-semibold text-purple-600 mb-4">Pacote Essencial</h3>
+                    <p class="text-gray-600 mb-4">Limpeza de pele + Massagem relaxante. Seu momento de renovação.</p>
+                    <p class="text-2xl font-bold text-pink-500 mb-6">R$ 250,00</p>
+                    <button onclick="window.location.href='#contato'" class="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold py-2.5 px-6 rounded-full transition duration-300 flex items-center gap-2">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M10.3 15.3a1 1 0 0 1-1.6 0l-3.7-3.7a1 1 0 0 1 1.6-1.6L10 13L12.7 9.7a1 1 0 0 1 1.6 1.6l-3.7 3.7z"/></svg>
+                        Comprar
+                    </button>
+                </div>
+                <div class="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6 transition duration-300 hover:shadow-lg hover:scale-[1.02] slide-up">
+                    <h3 class="text-xl font-semibold text-purple-600 mb-4">Pacote Relax</h3>
+                    <p class="text-gray-600 mb-4">Massagem relaxante + Tratamento facial. Desconecte e revigore-se.</p>
+                    <p class="text-2xl font-bold text-pink-500 mb-6">R$ 320,00</p>
+                    <button onclick="window.location.href='#contato'" class="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold py-2.5 px-6 rounded-full transition duration-300 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M10.3 15.3a1 1 0 0 1-1.6 0l-3.7-3.7a1 1 0 0 1 1.6-1.6L10 13L12.7 9.7a1 1 0 0 1 1.6 1.6l-3.7 3.7z"/></svg>
+                        Comprar
+                    </button>
+                </div>
+                <div class="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6 transition duration-300 hover:shadow-lg hover:scale-[1.02] slide-up">
+                    <h3 class="text-xl font-semibold text-purple-600 mb-4">Pacote Premium</h3>
+                    <p class="text-gray-600 mb-4">Limpeza de pele + Massagem relaxante + Tratamento facial completo. A experiência completa de bem-estar.</p>
+                    <p class="text-2xl font-bold text-pink-500 mb-6">R$ 450,00</p>
+                    <button onclick="window.location.href='#contato'" class="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold py-2.5 px-6 rounded-full transition duration-300 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M10.3 15.3a1 1 0 0 1-1.6 0l-3.7-3.7a1 1 0 0 1 1.6-1.6L10 13L12.7 9.7a1 1 0 0 1 1.6 1.6l-3.7 3.7z"/></svg>
+                        Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="bg-blue-50/50 py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 slide-up">
+                <h2 class="text-3xl font-semibold text-blue-700 mb-6">Sobre Nós</h2>
+                <p class="text-gray-600 text-lg">
+                    Bem-vindo à Michele Merlot Estética & Cosmética, um espaço dedicado à sua beleza e bem-estar.
+                    Nossa missão é proporcionar tratamentos de alta qualidade, com um atendimento personalizado e
+                    ambiente acolhedor. Contamos com profissionais qualificados e utilizamos produtos de primeira
+                    linha para garantir os melhores resultados. Agende seu horário e descubra uma nova experiência
+                    em cuidados estéticos.
+                </p>
+            </div>
+            <div class="md:w-1/2 rounded-lg overflow-hidden shadow-lg slide-up">
+                <img src="https://images.unsplash.com/photo-1626080308409-17f979424c13?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sobre Nós" class="w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="bg-purple-50/50 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-blue-700 text-center mb-12 fade-in">Entre em Contato</h2>
+            <div class="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 slide-up">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Informações de Contato</h3>
+                    <ul class="text-gray-600 text-lg space-y-2">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin inline-block mr-2 text-blue-500"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Endereço: Rua dos Lírios, 123 - São Paulo, SP</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone inline-block mr-2 text-blue-500"><path d="M5 4h4l2 5-2.5 1.5a.5.5 0 0 0-.1 1L8 16a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5l-2.5-2.5a.5.5 0 0 0-1-.1L15 9l5-2v4a2 2 0 0 1-2 2H2a2 20 0 1-2-2V4a2 2 0 0 1 2-2h4Z"/></svg> Telefone: (11) 98765-4321</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail inline-block mr-2 text-blue-500"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/><polyline points="22 6 12 13 2 6"/></svg> Email: contato@michelemerlot.com.br</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Formulário de Contato</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome:</label>
+                            <input type="text" id="nome" name="nome" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Seu Nome">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="seuemail@exemplo.com">
+                        </div>
+                        <div>
+                            <label for="mensagem" class="block text-gray-700 text-sm font-boldmb-2">Mensagem:</label>
+                            <textarea id="mensagem" name="mensagem" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32 resize-y" placeholder="Sua Mensagem"></textarea>
+                        </div>
+                        <button type="submit" class="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300 shadow-md w-full">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100/80 backdrop-blur-md py-4">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            © 2024 Michele Merlot Estética & Cosmética. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        // Rolagem suave para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
